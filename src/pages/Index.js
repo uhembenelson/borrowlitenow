@@ -3,9 +3,52 @@ import MainNavigation from '../components/layout/MainNavigation';
 
 const  Index = () => {
   return (
-      <body>
+      <body class="container">
+        <div class="row uk-margin-large-top">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+            {/* mobile */}
+            <div class="uk-hidden@s">
+            <div class="" style={{color:'#339900', fontFamily:'Dongle', fontSize:60, fontWeight:'800', lineHeight:1}}>Borrow light now</div>
+            <div class="" style={{color:'#450acc' , marginTop:-20, fontFamily:'Dongle', fontSize:60, fontWeight:'800'}}>pay back later</div>
+
+            <div class="" style={{color:'gray' , lineHeight:'1', fontFamily:'Dongle', fontSize:25, fontWeight:'800'}}>
+            Currently out of power? without money? let us help you meet that target..
+               With borrowlite you can borrow electricity token now and pay later
+              </div>
+              <div class="uk-margin">
+              <button style={{ backgroundColor:'#339900', color:'white',fontFamily:'Dongle', fontSize:20, borderRadius:5 }} class= " uk-button uk-button-default uk-button-large uk-margin-right uk-width-1-3@l uk-width-1-1@s ">Borrow light</button>
+              <button style={{ backgroundColor:'#450acc', color:'white',fontFamily:'Dongle', fontSize:20, borderRadius:5 }} class= " uk-button uk-button-default uk-button-large uk-margin-right uk-width-1-3@l uk-width-1-1@s">Borrow light</button>
+              </div>
+            </div>
+
+
+           <div class="visible-lg-block">
+           <div class="" style={{color:'#339900', fontFamily:'Dongle', fontSize:100, fontWeight:'800'}}>Borrow light now</div>
+            <div class="" style={{color:'#450acc' , marginTop:-70, fontFamily:'Dongle', fontSize:100, fontWeight:'800'}}>pay back later</div>
+            <div class="" style={{color:'gray' , lineHeight:'1', fontFamily:'Dongle', fontSize:25, fontWeight:'800'}}>
+            Currently out of power? without money? let us help you meet that target..
+               With borrowlite you can borrow electricity token now and pay later
+              </div>
+              <div class="uk-margin">
+              <button style={{ backgroundColor:'#339900', color:'white',fontFamily:'Dongle', fontSize:20, borderRadius:5 }} class= " uk-button uk-button-default uk-button-large uk-margin-right uk-width-1-3@l uk-width-1-1@s ">Borrow light</button>
+              <button style={{ backgroundColor:'#450acc', color:'white',fontFamily:'Dongle', fontSize:20, borderRadius:5 }} class= " uk-button uk-button-default uk-button-large uk-margin-right uk-width-1-3@l uk-width-1-1@s">Borrow light</button>
+              </div>
+           </div>
+            
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            this is two
+          </div>
+        </div>
+
+
+
+
+
            {/* mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 */}
-          <main class="grid grid-cols-2  max-w-7xl">
+          {/* <main class="grid grid-cols-2  max-w-7xl">
         <div class="sm:text-center lg:text-center ">
           <h1 class="text-6xl  font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block xl:inline" style={{color:'#339900'}}>Borrow light now </span>  
@@ -31,7 +74,7 @@ const  Index = () => {
         <div className=''>
           <p>image will go here</p>
         </div>
-      </main>
+      </main> */}
 
       </body>
 
