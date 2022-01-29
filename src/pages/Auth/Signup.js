@@ -6,6 +6,8 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import { Dots, Spinner } from "react-activity";
 import "react-activity/dist/Dots.css";
+import Popup from 'react-animated-popup';
+import { render } from 'react-dom';
 
 const  Signup =()=> {
 const [fullname, setFullname] = useState()
@@ -16,10 +18,81 @@ const [password, setPassword] = useState()
 const [error, setError] = useState()
 const [showerror, setShowerror] = useState(false)
 const [loadingme, setLoadingme] = useState(false)
+const [showsuccess, setShowsuccess] = useState(false)
+const [success, setSuccess] = useState()
+const [visible, setVisible] = useState(false)
 
-useEffect(() => {  
-    ErrorAlert()
-     });
+// useEffect(() => {  
+   
+//      });
+
+
+     const Showpop =()=>{
+
+      return(
+        <>
+        <Popup visible={visible} onClose={() => setVisible(false)}>
+        
+         <div class="uk-inline">
+         <div style={{ color:'red' }} class="  uk-form-icon" uk-icon="icon: warning; ratio: 2"></div>
+         <h1 style={{fontFamily:'Dongle', color:'red',}} class="uk-margin-large-left uk-align-center">there was an error</h1>
+         </div>
+          <p style={{marginTop:-20, fontFamily:'Dongle', fontSize:25, lineHeight:1, fontWeight:100}}>
+            {error}
+          </p>
+        
+      </Popup>
+  
+      <Popup class="uk-margin-top" visible={showsuccess} onClose={() => setShowsuccess(false)}>
+        
+        <div class="uk-inline">
+        <div style={{ color:'green' }} class="  uk-form-icon" uk-icon="icon: check; ratio: 2"></div>
+        <h1 style={{fontFamily:'Dongle', color:'green',}} class="uk-margin-large-left uk-align-center">Welcome</h1>
+        </div>
+         <p style={{marginTop:-20, fontFamily:'Dongle', fontSize:25, lineHeight:1, fontWeight:100}}>
+           {success}
+         </p>
+       
+     </Popup>
+      </>
+  
+      
+      )
+      }
+
+
+      const Welcome =()=>{
+      return(
+        <div>
+        <p>
+        We’re thrilled to have you join us at borrowlite, navigate to your login page to start exploring 
+        our services
+        </p>
+
+        
+        <p>
+        <h4>For normal user</h4>
+        As a normal user you can start buying or borrowing light in seconds, <Link to="/signin">login to get started</Link></p>
+         
+        <h4>For vendors </h4>
+        <p>As a vendor you can start earning by extending borrowlite services to users around your communities or even your 
+        family and friends. <Link to="/signin">Login to get started</Link></p>
+
+        <h4>For developers</h4>
+        <p>
+        Developers can access our Apis to integrate and build upon, check our documentation to get start 
+        </p>
+        </div>
+      )
+        
+
+      }
+
+
+
+
+
+
 
 const register = () => {
   
@@ -32,45 +105,40 @@ const register = () => {
     }
     console.log(payload)
 
-    if(fullname == ''){
-      swal({
-        text:'fullname name can not be emty'
-      })
+    if(fullname == undefined){
+      setError("Hello dear your full name  is required")
+     setVisible(true);
     }else{
-      if(email == ''){
-        swal({
-          text:'email can not be emty'
-        })
+      if(email == undefined){
+        setError("Hello dear your email  is required")
+        setVisible(true);
       }else{
-        if(number == ''){
-          swal({
-            text:'phone number cannot be emty'
-          })
+        if(number == undefined){
+          setError("Hello dear your phone number  is required")
+          setVisible(true);
         }else{
-          if(userType == ''){
-            swal({
-              text:'Please select your user type'
-            })
+          if(userType == undefined){
+            setError("Hello dear your user type  is required")
+               setVisible(true);
           }else{
-            if(password == ''){
-              swal({
-                text:'password cannot be emty'
-              })
+            if(password == undefined){
+              setError("Hello dear your password  is required")
+              setVisible(true);
             }else{
               setLoadingme(true)
-              axios.post('https://borrowlight.herokuapp.com/api/v2/register/',payload).then(function (response) {
-                console.log(response.data.user)
-                const userdata = response.data.user
-                localStorage.setItem("userdata", JSON.stringify(userdata));
+              axios.post('/register/',payload).then(function (response) {
+                console.log(response.data)
+               // const userdata = response.data.user
+               // localStorage.setItem("userdata", JSON.stringify(userdata));
                 if(response.data.data == "account created"){
                   setLoadingme(false)
-                    swal({
-                        text:"account created welcome to borrowlite"
-                    })
+                  setSuccess(<Welcome/>)
+                  setShowsuccess(true);
                 }else{
                   setLoadingme(false)
-                    setShowerror(true)
-                    setError(response.data.msg)
+                  setError(`${response.data.msg}`)
+                  setVisible(true);
+                    console.log("this is me", response.data.msg)
                     
                 }
         
@@ -99,120 +167,160 @@ const register = () => {
 
 }
 
-const ErrorAlert = ()=> (
-   
-
-    showerror == true? (
-<div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-  
-    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-
-  
-    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-
-   
-    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-        <div class="sm:flex sm:items-start">
-          <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-           
-            <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-          </div>
-          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-              There was an error
-            </h3>
-            <div class="mt-2">
-              <p class="text-sm text-gray-500">
-                 {
-                     error
-                 }
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-        
-        <button onClick={() =>setShowerror(false)}  type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-    ):(
-        <></>
-    )
-
-
-)
 
 
   return (
-    <div>
-        <ErrorAlert error/>
+    <>
+   
+     <div class="row container uk-align-center">
+     <Showpop/>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
      
-      <div>
-      <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8">
-    <div>
-      <img class="mx-auto h-12 w-auto" src={logo} alt="borrowlite logo"/>
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-indigo-600">
-         Register to start borrowing light in seconds 
-      </h2>
+      <h2 class="uk-margin-top" style={{fontFamily:'Dongle', color:'#450acc'}}>
+              Create your borrowlite account
+                </h2>
+                <p style={{fontFamily:'Dongle', fontSize:30, color:'gray', fontWeight:'200', lineHeight:1}}>
+                  We are excited you want to join us, <Link to="">Borrowlite</Link> is a platform that 
+                  allows users with prepaid meters to borrow electricity and payback later at 
+                  an interest
+                  Users can also buy electricity here on borrowlite, we have also extended the 
+                  borrow functionalities to vendors who want to start earning on borrow. 
+                  With our <Link to="">robust Apis</Link> developers can integrate and extend borrowlite services to  user
+                </p>
+
+      </div>
+
+
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 uk-margin">
      
+        <div class="uk-card uk-card-body uk-card-default" style={{borderRadius:10}}>
+        <h1 style={{fontFamily:'Dongle', color:'#450acc'}}>
+              Signup
+                </h1>
+                <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input  value={fullname}   onChange={e => setFullname(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="text" placeholder='Enter your full name'/>
+                </div>
+            </div>
+            <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                <input value={number}   onChange={e => setNumber(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="Number" placeholder='Enter your phone number'/>
+            </div>
+        </div>
+        <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+            <input value={email}   onChange={e => setEmail(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="email" placeholder='Enter your email address'/>
+        </div>
     </div>
-    <div class="mt-8 space-y-6">
+
+    <div class="uk-margin">
+    <div class="uk-inline">
+        <span class="uk-form-icon" uk-icon="icon: users"></span>
+                    <select value={userType}   name="userType" onChange={e => setUserType(e.target.value)}  style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class= " uk-input uk-select uk-form-width-large uk-form-large" id="form-stacked-select">
+                    <option style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} disabled>User type</option>
+                    <option style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} value="personal">Personal</option>
+                    <option style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} value="merchant">vendor</option>
+                    <option style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} value="merchant">developer</option>
+            </select>
+    </div>
+</div>
+
+ <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+            <input value={password}   onChange={e => setPassword(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="password" placeholder='Enter your password'/>
+        </div>
+    </div>
+
+    <div class="uk-margin">
+    <button onClick={register} disabled={loadingme}  style={{ backgroundColor:'#450acc', color:'white',fontFamily:'Dongle', fontSize:25, borderRadius:5 }} class= " uk-button uk-button-default uk-button-large uk-width-1-1">
+     
+       {
+         loadingme == true? (<span>Creating your account please wait... <Dots /></span>):
+          (<span>Sign up</span>)  
+     }
+      </button>
+    </div>
+
+    <div class="uk-margin">
+    <p style={{fontFamily:'Dongle', fontSize:25,}} class="uk-text-center">Already have an account?</p>
+    <p style={{fontFamily:'Dongle', fontSize:25, marginTop:-30}} class="uk-text-center">
+  <Link to="/signin">Login</Link>
+    </p>
+  </div>
+        </div>
+      </div>
+      
+    </div>
+    </>
+   
+
+
+
+//     <div>
+//         {/* <ErrorAlert error/> */}
+     
+//       <div>
+//       <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+//   <div class="max-w-md w-full space-y-8">
+//     <div>
+//       <img class="mx-auto h-12 w-auto" src={logo} alt="borrowlite logo"/>
+//       <h2 class="mt-6 text-center text-3xl font-extrabold text-indigo-600">
+//          Register to start borrowing light in seconds 
+//       </h2>
+     
+//     </div>
+//     <div class="mt-8 space-y-6">
 
     
 
 
-      <input type="hidden" name="remember" value="true"/>
-      <div class="rounded-md shadow-sm -space-y-px">
-        <div>
-          <label for="email-address" class="sr-only">Full name</label>
-          <input disabled={loadingme} value={fullname}   name="fullname" onChange={e => setFullname(e.target.value)} id="fullname"  type="text" autocomplete="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Full name"/>
-        </div>
-        <div>
-          <label for="email-address" class="sr-only">Phone number</label>
-          <input disabled={loadingme} value={number}   name="number" onChange={e => setNumber(e.target.value)} id="number"  type="number" autocomplete="number" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Phone number"/>
-        </div>
-        <div>
-          <label for="email-address" class="sr-only">Email address</label>
-          <input disabled={loadingme} value={email}   name="email" onChange={e => setEmail(e.target.value)} id="email" type="email" autocomplete="email" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"/>
-        </div>
-        <div>
-          <label for="email-address" class="sr-only">User type</label>
-          <select value={userType}   name="userType" onChange={e => setUserType(e.target.value)} id="email"  type="email" autocomplete="email" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="User type">
-          <option disabled>User type</option>
-                  <option value="personal">Personal</option>
-                  <option value="merchant">Merchant</option>
-            </select>
-        </div>
-        <div>
-          <label for="password" class="sr-only">Password</label>
-          <input disabled={loadingme}  value={password}   onChange={e => setPassword(e.target.value)} id="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password"/>
-        </div>
-      </div>
+//       <input type="hidden" name="remember" value="true"/>
+//       <div class="rounded-md shadow-sm -space-y-px">
+//         <div>
+//           <label for="email-address" class="sr-only">Full name</label>
+//           <input disabled={loadingme} value={fullname}   name="fullname" onChange={e => setFullname(e.target.value)} id="fullname"  type="text" autocomplete="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Full name"/>
+//         </div>
+//         <div>
+//           <label for="email-address" class="sr-only">Phone number</label>
+//           <input disabled={loadingme} value={number}   name="number" onChange={e => setNumber(e.target.value)} id="number"  type="number" autocomplete="number" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Phone number"/>
+//         </div>
+//         <div>
+//           <label for="email-address" class="sr-only">Email address</label>
+//           <input disabled={loadingme} value={email}   name="email" onChange={e => setEmail(e.target.value)} id="email" type="email" autocomplete="email" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"/>
+//         </div>
+//         <div>
+//           <label for="email-address" class="sr-only">User type</label>
+//           <select value={userType}   name="userType" onChange={e => setUserType(e.target.value)} id="email"  type="email" autocomplete="email" required class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="User type">
+//           <option disabled>User type</option>
+//                   <option value="personal">Personal</option>
+//                   <option value="merchant">Merchant</option>
+//             </select>
+//         </div>
+//         <div>
+//           <label for="password" class="sr-only">Password</label>
+//           <input disabled={loadingme}  value={password}   onChange={e => setPassword(e.target.value)} id="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password"/>
+//         </div>
+//       </div>
 
      
 
-      <div>
-        <button onClick={register} disabled={loadingme}   class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          {
-            loadingme == true? (<span>Creating your account please wait... <Dots /></span>):
-            (<span>Sign up</span>)
-          }
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
+//       <div>
+//         <button onClick={register} disabled={loadingme}   class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+//           {
+//             loadingme == true? (<span>Creating your account please wait... <Dots /></span>):
+//             (<span>Sign up</span>)
+//           }
+//         </button>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//       </div>
 
 
 
@@ -223,7 +331,9 @@ const ErrorAlert = ()=> (
 
 
 
-  </div>  
+//   </div> 
+  
+  
   );
 }
 

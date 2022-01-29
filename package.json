@@ -13,6 +13,7 @@
     "flutterwave-react-v3": "^1.1.0",
     "react": "^17.0.2",
     "react-activity": "^2.1.1",
+    "react-animated-popup": "^0.1.1",
     "react-copy-clipboard": "^2.0.1",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
@@ -22,7 +23,7 @@
     "sweetalert": "^2.1.2",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "https://borrowlight.herokuapp.com",
+ 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
