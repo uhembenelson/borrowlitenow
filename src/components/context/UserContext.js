@@ -6,9 +6,6 @@ const UserContextProvider = (props)=> {
     const [user, setUser] = useState(allusers)
     const [authenticated, setAuthenticated] = useState()
     
-    // if(user.email){
-    //     setAuthenticated(true)
-    // }
     const checkuser = ()=> {
         if(user == null){
             setAuthenticated(false)
@@ -21,9 +18,6 @@ const UserContextProvider = (props)=> {
         checkuser()
     })
    
-
-
-
     return(
     <UserContext.Provider value={{user, authenticated}}>
         {props.children}

@@ -67,7 +67,7 @@ const  MainNavigation = (props)=> {
               <img src={logo}  width={100}/>
               </a></li>
             
-            <li class="uk-margin-small-top uk-margin-large-left">
+            {/* <li class="uk-margin-small-top uk-margin-large-left">
               <Link to="/" style={{fontFamily:'Dongle', fontSize:25}}>Home</Link>
               </li>
             <li class="uk-margin-small-top ">
@@ -75,12 +75,12 @@ const  MainNavigation = (props)=> {
               </li>
             <li class="uk-margin-small-top ">
               <Link to="/buy" style={{fontFamily:'Dongle', fontSize:25}}>Buy light</Link>
-              </li>
+              </li>  */}
         </ul>
 
     </div>
 
-    <div class="uk-navbar-right">
+  <div class="uk-navbar-right">
         
         <ul class="uk-navbar-nav">
         <li class="uk-margin-small-top "><a href="#" style={{fontFamily:'Dongle', fontSize:25}}>
@@ -89,6 +89,10 @@ const  MainNavigation = (props)=> {
           </li>
         <li class="uk-margin-small-top "><a href="#" style={{fontFamily:'Dongle', fontSize:25}}>
           For developers
+          </a>
+          </li>
+          <li class="uk-margin-small-top "><a href="#" style={{fontFamily:'Dongle', fontSize:25}}>
+          about Us
           </a>
           </li>
            {

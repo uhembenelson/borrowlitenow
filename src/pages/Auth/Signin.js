@@ -4,7 +4,7 @@ import Popup from 'react-animated-popup';
 import axios from '../../lib/Config'
 
 import logo from '../../images/logo.png'
-import { applyMiddleware } from 'redux';
+
 
 const  Signin = ()=> {
   const [visible, setVisible] = useState(false)

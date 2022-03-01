@@ -2,8 +2,6 @@ import { useEffect, useState, useContext } from 'react';
 import { useNavigate, Route } from 'react-router-dom';
 import bg from '../images/bg.jpg';
 import axios from 'axios';
-// import { BallClipRotate } from 'react-pure-loaders';
-// import { BallBeat } from 'react-pure-loaders';
 import Loader from "react-js-loader";
 import swal from 'sweetalert';
 import { UserContext } from '../components/context/UserContext';

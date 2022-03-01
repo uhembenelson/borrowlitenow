@@ -175,18 +175,50 @@ const register = () => {
      <div class="row container uk-align-center">
      <Showpop/>
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-     
-      <h2 class="uk-margin-top" style={{fontFamily:'Dongle', color:'#450acc'}}>
-              Create your borrowlite account
+     <div class ="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+              <h2 class="uk-margin-top" style={{fontFamily:'Dongle', color:'#450acc'}}>
+              Buy electricity
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:30, color:'gray', fontWeight:'200', lineHeight:1}}>
-                  We are excited you want to join us, <Link to="">Borrowlite</Link> is a platform that 
-                  allows users with prepaid meters to borrow electricity and payback later at 
-                  an interest
-                  Users can also buy electricity here on borrowlite, we have also extended the 
-                  borrow functionalities to vendors who want to start earning on borrow. 
-                  With our <Link to="">robust Apis</Link> developers can integrate and extend borrowlite services to  user
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                  Buy electricity with borrowlite with just a few clicks and get token sent to you
+                  email and phone number.
                 </p>
+                <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+              Borrow electricity
+                </h2>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                  Are you out of electricity and out cash or can't access your regular power vendor? with
+                  borrowlite you can borrow light to help you through the night or help you finish that project and pay 
+                  back later
+                  </p>
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+              Rebust Api Integration
+                </h2>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                We have also extended the 
+                  borrow functionalities to vendors who want to start earning on borrow.
+                  With our <Link to="">robust Apis</Link> developers can integrate and extend borrowlite services to  user
+                  </p>
+
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                  Strong coverage across Nigeria
+                </h2>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+               With over 9 Discos integrated you can access  light and borrow light from any where in Nigeria 
+                  </p>
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                  24/7 reliable customer support
+                </h2>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                Our technical product specialists are always available to help via email, zoom, or call. <br/>
+                Thank you for choosing us. We look forward to being your reliable electricity partner.
+                  </p>
+                  <p>Uhembe Nelson</p>
+                  <p style={{marginTop:-20}}>CEO/founder Borrowlite</p>
+                
+     </div>
+     <div class="col-lg-3"></div>
 
       </div>
 
