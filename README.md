@@ -9,8 +9,28 @@ Confident communicator, strategic thinker, and innovative creator to develop sof
 
 I help clients with the following types of projects:
 
-(1) Web Development (2) App Development (3) eCommerce solutions (4) React native cross platform (5) IOS apps (6) CMS Content Management Solution (7) ReactJs projects
+(1) Web Development
+(2) Mobile App Development
+(3) eCommerce solutions
+(4) React native cross platform
+(5) IOS apps
+(6) CMS Content Management Solution
+
+
 
 My skills are
 
-(1) HTML5 (2) CSS3 (3) Javascript (4) Flutter, (5) VueJs, (6) Bootstrap, (7) Materialize CSS, (8) UIKIT, (9) PHP Laravel (10) Slim PHP, (11) DevOps
+(1) HTML5
+(2) CSS3
+(3) Javascript
+(4) Flutter,
+(5) VueJs,
+(6) Bootstrap,
+(7) Materialize CSS,
+(8) UIKIT,
+(9) PHP Laravel
+(10) Slim PHP,
+(11) DevOps
+(12) React js
+(13) React Native
+(14) Nodejs
