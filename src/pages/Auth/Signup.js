@@ -2,7 +2,7 @@ import { useEffect, useState, React } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
 import logo from '../../images/logo.png'
-import axios from 'axios';
+import axios from '../../lib/Config'
 import swal from 'sweetalert';
 import { Dots, Spinner } from "react-activity";
 import "react-activity/dist/Dots.css";
@@ -101,7 +101,8 @@ const register = () => {
         email,
         number,
         userType,
-        password
+        password,
+        balance:'0'
     }
     console.log(payload)
 
@@ -126,7 +127,7 @@ const register = () => {
               setVisible(true);
             }else{
               setLoadingme(true)
-              axios.post('/register/',payload).then(function (response) {
+              axios.post('/api/v2/register/',payload).then(function (response) {
                 console.log(response.data)
                // const userdata = response.data.user
                // localStorage.setItem("userdata", JSON.stringify(userdata));

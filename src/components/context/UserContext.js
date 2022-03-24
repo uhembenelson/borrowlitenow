@@ -8,6 +8,7 @@ const UserContextProvider = (props)=> {
     
     const checkuser = ()=> {
         if(user == null){
+            console.log("this is user from context",user)
             setAuthenticated(false)
         }else{
             setAuthenticated(true)  
