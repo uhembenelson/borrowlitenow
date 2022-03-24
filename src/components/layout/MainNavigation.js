@@ -17,13 +17,13 @@ const  MainNavigation = (props)=> {
   const [showpop, setShowpop] = useState(false)
 
   const { user } = useContext(UserContext)
+  const Logout = async() =>{
+    localStorage.removeItem("userdata");
+     window.location.reload()
 
-
-
+  }
   return (
     <>
-
-
     <nav class="uk-navbar uk-hidden@s  container" uk-navbar>
     <div class="uk-navbar-left">
       <ul  class="uk-navbar-nav ">
@@ -63,19 +63,11 @@ const  MainNavigation = (props)=> {
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav ">
-            <li class=""><a href="#">
+            <li class=""><Link to="/" href="#">
               <img src={logo}  width={100}/>
-              </a></li>
+              </Link></li>
             
-            {/* <li class="uk-margin-small-top uk-margin-large-left">
-              <Link to="/" style={{fontFamily:'Dongle', fontSize:25}}>Home</Link>
-              </li>
-            <li class="uk-margin-small-top ">
-              <Link to="/borrowlight" style={{fontFamily:'Dongle', fontSize:25}}>Borrow light</Link>
-              </li>
-            <li class="uk-margin-small-top ">
-              <Link to="/buy" style={{fontFamily:'Dongle', fontSize:25}}>Buy light</Link>
-              </li>  */}
+          
         </ul>
 
     </div>
@@ -91,15 +83,21 @@ const  MainNavigation = (props)=> {
           For developers
           </a>
           </li>
-          <li class="uk-margin-small-top "><a href="#" style={{fontFamily:'Dongle', fontSize:25}}>
+          <li class="uk-margin-small-top "><Link to="/About" style={{fontFamily:'Dongle', fontSize:25}}>
           about Us
-          </a>
+          </Link>
           </li>
+
+         
            {
              user !==  null? (
-              <li class=" "><a href="#" style={{marginTop:5 ,fontFamily:'Dongle', fontSize:25}}>
-              <img class="uk-border-pill" src={userImage} width="30" height="30" alt="Border pill"/>
-                </a></li>
+              <li class=" ">
+                <a onClick={()=>{Logout()}} href="#" style={{marginTop:10 ,fontFamily:'Dongle', fontSize:25}}>
+              {/* <img class="uk-border-pill" src={userImage} width="30" height="30" alt="Border pill"/> */}
+
+              Logout
+                </a>
+                </li>
              ):(
              <>
               <li class="uk-margin-small-top "><Link to="/Signin"  style={{fontFamily:'Dongle', fontSize:25}}>

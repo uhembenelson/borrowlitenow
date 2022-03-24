@@ -181,42 +181,42 @@ const register = () => {
               <h2 class="uk-margin-top" style={{fontFamily:'Dongle', color:'#450acc'}}>
               Buy electricity
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1}}>
                   Buy electricity with borrowlite with just a few clicks and get token sent to you
                   email and phone number.
                 </p>
-                <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', }}>
               Borrow electricity
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, }}>
                   Are you out of electricity and out cash or can't access your regular power vendor? with
                   borrowlite you can borrow light to help you through the night or help you finish that project and pay 
                   back later
                   </p>
-                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', }}>
               Rebust Api Integration
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1,}}>
                 We have also extended the 
                   borrow functionalities to vendors who want to start earning on borrow.
                   With our <Link to="">robust Apis</Link> developers can integrate and extend borrowlite services to  user
                   </p>
 
-                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', }}>
                   Strong coverage across Nigeria
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, }}>
                With over 9 Discos integrated you can access  light and borrow light from any where in Nigeria 
                   </p>
-                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', marginTop:-20}}>
+                  <h2 class="" style={{fontFamily:'Dongle', color:'#450acc', }}>
                   24/7 reliable customer support
                 </h2>
-                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1, marginTop:-20}}>
+                <p style={{fontFamily:'Dongle', fontSize:22, color:'gray', fontWeight:'100', lineHeight:1,}}>
                 Our technical product specialists are always available to help via email, zoom, or call. <br/>
                 Thank you for choosing us. We look forward to being your reliable electricity partner.
                   </p>
                   <p>Uhembe Nelson</p>
-                  <p style={{marginTop:-20}}>CEO/founder Borrowlite</p>
+                  <p style={{}}>CEO/founder Borrowlite</p>
                 
      </div>
      <div class="col-lg-3"></div>

@@ -139,6 +139,7 @@ const  Signin = ()=> {
     <div class="row container uk-align-center">
      
       <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12"></div>
+       <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12"></div>
       <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 uk-margin-large-top">
             <div class="uk-card uk-card-body uk-card-default uk-card-small@s " style={{borderRadius:10}}>
               <h1 style={{fontFamily:'Dongle', color:'#450acc'}}>

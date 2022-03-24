@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 const Aboutus = () => {
   return (
@@ -47,6 +48,7 @@ const Aboutus = () => {
         </div>
 
         <div className="uk-margin">
+          <Link to="/About">
           <button
             style={{
               marginTop: 20,
@@ -61,6 +63,7 @@ const Aboutus = () => {
           >
             READ MORE
           </button>
+          </Link>
         </div>
       </div>
 
