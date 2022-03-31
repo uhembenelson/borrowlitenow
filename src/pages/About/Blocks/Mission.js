@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import happy from '../../../images/happy.png';
-import About from '../../Home/Blocks/Aboutus';
+// import About from '../../Home/Blocks/Aboutus';
 import Teams from './Teams';
 import Footer from '../../Home/Blocks/Footer';
 
@@ -28,7 +28,7 @@ const Mission = () => {
            <div className="row uk-text-center uk-margin-large-top">
 
            <div className=" hidden-lg hidden-md col-lg-6 col-sm-12 col-xs-12 uk-margin-small-top">
-                   <img src={happy}/>
+                   <img src={happy} alt=""/>
                 </div>
 
 
@@ -61,7 +61,7 @@ const Mission = () => {
                 </div>
 
                 <div className=" hidden-sm hidden-xs col-lg-6 col-sm-12 col-xs-12 uk-margin-small-top">
-                   <img src={happy}/>
+                   <img src={happy} alt=""/>
                 </div>
            </div>
            <Teams/>

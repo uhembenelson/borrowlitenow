@@ -114,7 +114,7 @@ const  OrderElectricity = (props) => {
    await Validation()
 
     if(validated === true){
-      if(paymentmode == "wallet"){
+      if(paymentmode === "wallet"){
          if(amount > balance){
        Showerror()
         setVisible(true)

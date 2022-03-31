@@ -15,12 +15,13 @@ import Dashboard from './pages/Dashboard/Index';
 import Users from './pages/Dashboard/Users';
 // import Footer from './components/blocks/Home/Footer';
 // import Footer from '../src/components/blocks/Home/Footer'
-import { UserContext } from './components/context/UserContext';
+// import { UserContext } from './components/context/UserContext';
 import Buy from './pages/Buying';
 import Borrow from './pages/Borrowing';
 import Getpower from './pages/Borrowing/Blocks/Getpower';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Faq from './pages/Faq';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Getpower' element={<Getpower/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/Faq' element={<Faq/>}/>
        
 
         {/* <Route path='/Footer' element={<Footer/>} /> */}

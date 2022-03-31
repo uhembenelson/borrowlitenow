@@ -39,7 +39,7 @@ const Calltoaction = () => {
                   lineHeight: "1",
                   fontFamily: "Dongle",
                   fontSize: 25,
-                  fontWeight: "800",
+                  fontWeight: "300",
                 }}
               >
                 Currently out of power? without money? let us help you meet that
