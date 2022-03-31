@@ -228,25 +228,27 @@ const register = () => {
      
         <div class="uk-card uk-card-body uk-card-default" style={{borderRadius:10}}>
         <h1 style={{fontFamily:'Dongle', color:'#450acc'}}>
-              Signup
-                </h1>
-                <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: user"></span>
-                    <input  value={fullname}   onChange={e => setFullname(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="text" placeholder='Enter your full name'/>
-                </div>
-            </div>
-            <div class="uk-margin">
-            <div class="uk-inline">
-                <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                <input value={number}   onChange={e => setNumber(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="Number" placeholder='Enter your phone number'/>
-            </div>
-        </div>
+          Signup
+        </h1>
         <div class="uk-margin">
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-            <input value={email}   onChange={e => setEmail(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="email" placeholder='Enter your email address'/>
-        </div>
+          <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input  value={fullname}   onChange={e => setFullname(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="text" placeholder='Enter your full name'/>
+          </div>
+          </div>
+
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: phone"></span>
+              <input value={number}   onChange={e => setNumber(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="Number" placeholder='Enter your phone number'/>
+            </div> 
+          </div>
+
+          <div class="uk-margin">
+          <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: mail"></span>
+              <input value={email}   onChange={e => setEmail(e.target.value)} style={{fontWeight:'200', borderRadius:5, fontSize:25,fontFamily:'Dongle'}} class="uk-input uk-form-width-large uk-form-large"  type="email" placeholder='Enter your email address'/>
+          </div>
     </div>
 
     <div class="uk-margin">

@@ -19,50 +19,88 @@ const Teams = () => {
         Meet our <span style={{color:'#450ACC'}}>Team</span>
         </div>
 
-      
-       <div className="col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
-       
+      <div className="row">
+       <div className="hidden-sm hidden-xs col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
           <div>
-              <img src={nelson} style={{width:333, height:333}}/>
+              <img src={nelson} style={{width:333, height:333}} alt=""/>
               <div className="uk-margin-top" style={{fontSize:40, fontFamily:'Dongle', fontWeight:'300'}}>Uhembe Nelson</div>
               <div className="" style={{marginTop: -11, fontSize:22, fontFamily:'Dongle', fontWeight:'300'}}>CEO, Founder, Engineering Lead</div>
               <div>
-              <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" />                 
-            <img src={facebook} style={{width:52, height:52,}}  />
-            <img src={lin} style={{width:52, height:52,}} className="uk-margin-left"  />
+                <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" alt="" />                 
+                <img src={facebook} style={{width:52, height:52,}} alt="" />
+                <img src={lin} style={{width:52, height:52,}} className="uk-margin-left" alt="" />
+              </div>
+          </div>
+        </div>
+
+        <div className="hidden-lg hidden-md col-lg-4 col-md-4 col-xs-6 col-sm-6">
+          <div>
+              <img src={nelson} style={{width:160, height:160}} alt=""/>
+              <div className="uk-margin-top" style={{fontSize:32, fontFamily:'Dongle', fontWeight:'300'}}>Uhembe Nelsonn</div>
+              <div className="" style={{marginTop: -11, fontSize:18, fontFamily:'Dongle', fontWeight:'300'}}>CEO, Founder, Engineering Lead</div>
+              <div>
+                <img src={insta2} style={{width:32, height:32,}}  className="uk-margin-right" alt="" />                 
+                <img src={facebook} style={{width:32, height:32,}} alt="" />
+                <img src={lin} style={{width:32, height:32,}} className="uk-margin-left" alt="" />
               </div>
           </div>
         </div>
         
 
 
-         <div className="col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
+         <div className="hidden-sm hidden-xs col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
           <div>
-              <img src={adam} style={{width:333, height:333}}/>
+              <img src={adam} style={{width:333, height:333}} alt=""/>
               <div className="uk-margin-top" style={{fontSize:40, fontFamily:'Dongle', fontWeight:'300'}}>Khairat Adam</div>
               <div className="" style={{marginTop: -11, fontSize:22, fontFamily:'Dongle', fontWeight:'300'}}>Ui/Ux Intern</div>
               <div>
-              <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" />                 
-            <img src={facebook} style={{width:52, height:52,}}  />
-            <img src={lin} style={{width:52, height:52,}} className="uk-margin-left"  />
+              <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" alt="" />                 
+            <img src={facebook} style={{width:52, height:52,}} alt="" />
+            <img src={lin} style={{width:52, height:52,}} className="uk-margin-left" alt="" />
+              </div>
+          </div>
+        </div>
+        <div className="hidden-lg hidden-md col-lg-4 col-md-4 col-xs-6 col-sm-6">
+          <div>
+              <img src={adam} style={{width:160, height:160}} alt=""/>
+              <div className="uk-margin-top" style={{fontSize:32, fontFamily:'Dongle', fontWeight:'300'}}>Khairat Adam</div>
+              <div className="" style={{marginTop: -11, fontSize:18, fontFamily:'Dongle', fontWeight:'300'}}>Ui/Ux Intern</div>
+              <div>
+                <img src={insta2} style={{width:32, height:32,}}  className="uk-margin-right" alt="" />                 
+                <img src={facebook} style={{width:32, height:32,}} alt="" />
+                <img src={lin} style={{width:32, height:32,}} className="uk-margin-left" alt="" />
               </div>
           </div>
         </div>
 
-        <div className="col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
+        
+        <div className=" hidden-sm hidden-xs col-lg-4 col-md-4 col-xs-6 col-sm-6 " >
           <div>
-              <img src={nelson} style={{width:333, height:333}}/>
+              <img src={nelson} style={{width:333, height:333}} alt=""/>
               <div className="uk-margin-top" style={{fontSize:40, fontFamily:'Dongle', fontWeight:'300'}}>John Doe</div>
               <div className="" style={{marginTop: -11, fontSize:22, fontFamily:'Dongle', fontWeight:'300'}}>Product Manager</div>
               <div>
-              <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" />                 
-            <img src={facebook} style={{width:52, height:52,}}  />
-            <img src={lin} style={{width:52, height:52,}} className="uk-margin-left"  />
+                <img src={insta2} style={{width:52, height:52,}}  className="uk-margin-right" alt=""/>                 
+                <img src={facebook} style={{width:52, height:52,}} alt=""  />
+                <img src={lin} style={{width:52, height:52,}} className="uk-margin-left" alt=""  />
               </div>
           </div>
         </div>
-           
+        <div className="hidden-lg hidden-md col-lg-4 col-md-4 col-xs-6 col-sm-6">
+          <div>
+              <img src={nelson} style={{width:160, height:160}} alt=""/>
+              <div className="uk-margin-top" style={{fontSize:32, fontFamily:'Dongle', fontWeight:'300'}}>John Doe</div>
+              <div className="" style={{marginTop: -11, fontSize:18, fontFamily:'Dongle', fontWeight:'300'}}>Product Manager</div>
+              <div>
+                <img src={insta2} style={{width:32, height:32,}}  className="uk-margin-right" alt="" />                 
+                <img src={facebook} style={{width:32, height:32,}} alt="" />
+                <img src={lin} style={{width:32, height:32,}} className="uk-margin-left" alt="" />
+              </div>
+          </div>
+        </div>
 
+
+        </div>   
        </div>
 
         </>

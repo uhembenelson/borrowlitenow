@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Footer from '../Home/Blocks/Footer';
 import Contacts from './Blocks/Contacts';
 import Support from './Blocks/Support';
