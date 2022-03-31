@@ -21,11 +21,11 @@ import Borrow from './pages/Borrowing';
 import Getpower from './pages/Borrowing/Blocks/Getpower';
 import About from './pages/About';
 import Contact from './pages/Contact';
-<<<<<<< HEAD
+
 import UIkit from 'uikit'
-=======
+
 import Faq from './pages/Faq';
->>>>>>> refs/remotes/origin/main
+
 
 
 function App() {
