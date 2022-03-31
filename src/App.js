@@ -25,7 +25,7 @@ import Conditions from './pages/Conditions';
 import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
 
-import UIkit from 'uikit'
+
 
 import Faq from './pages/Faq';
 
