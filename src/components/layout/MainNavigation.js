@@ -16,13 +16,7 @@ const  MainNavigation = (props)=> {
   const userdata = JSON.parse(localStorage.getItem("userdata"));
   const [showpop, setShowpop] = useState(false)
 
-  const handleToggle = () => {
-    if (showmenu === false){
-      console.log("its working")
-    } else{
-      console.log("its not working")
-    }
-  }
+
 
   const { user } = useContext(UserContext)
   const Logout = async() =>{
@@ -31,28 +25,6 @@ const  MainNavigation = (props)=> {
   }
   return (
     <>
-    {/* <button class="uk-hidden@s uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary">Primary Nav</button>
-    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-
-            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li class="uk-parent">
-                    <a href="#">Parent</a>
-                    <ul class="uk-nav-sub">
-                        <li><a href="#">Sub item</a></li>
-                        <li><a href="#">Sub item</a></li>
-                    </ul>
-                </li>
-                <li class="uk-nav-header">Header</li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
-            </ul>
-
-        </div>
-    </div> */}
 
     {/* navbar for small screens */}
     <nav class="uk-navbar uk-hidden@s container" uk-navbar>

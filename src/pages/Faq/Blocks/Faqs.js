@@ -101,8 +101,11 @@ const Faqs = ()=> {
 
         {
           faqData.map((item) => 
-          <li>
-          <h3 style={{fontWeight:'200', fontSize:28,fontFamily:'Dongle'}} onClick={() =>{handleChange(item)}} class="uk-accordion-title">{item.question}</h3>
+          <li style={{listStyle: 'none'}}>
+            <div className="uk-margin-top" style={{border: '1px solid #BDBDBD', borderRadius: '5px',}}>
+            <h3 style={{fontWeight:'200', fontSize:28,fontFamily:'Dongle', marginLeft: '10px' }} onClick={() =>{handleChange(item)}} class="uk-accordion-title">{item.question}</h3>
+            </div>
+          
           
           {
             me === item.id? (<div style={{fontWeight:'200', fontSize:25,fontFamily:'Dongle'}} class="uk-accordion-content">{item.answer}</div>): null
