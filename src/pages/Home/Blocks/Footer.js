@@ -12,7 +12,7 @@ const Footer = () => {
     return(
         <div className="uk-margin-large-top" style={{backgroundColor:'#F8F5FF'}}>
           <div className="uk-container">
-            <div className="col-lg-3 col-lg-12 uk-margin-top uk-margin-large-bottom uk-margin-left">
+            <div className="col-lg-3 col-lg-12 uk-margin-top uk-margin-large-bottom">
               <img src={logo} style={{width:120}} alt=""/>
               <div style={{fontSize:32,fontFamily:'Dongle', fontWeight:'300' }}>
               @2022 Borrowlite inc.
