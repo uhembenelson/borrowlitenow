@@ -3,6 +3,7 @@ import happy from '../../../images/happy.png';
 import About from '../../Home/Blocks/Aboutus';
 import Teams from './Teams';
 import Footer from '../../Home/Blocks/Footer';
+import Toggle from '../../Toggle/index';
 
 const Mission = () => {
 
@@ -17,6 +18,8 @@ const Mission = () => {
            Currently out of power? without money? Let us help you meet that target... With borrowlite, you can borrow electricity token now<br/>
             and pay late. learn more about borrowlite and the services we offer 
            </div>
+
+        <Toggle/>
 
 
            <div className="uk-margin-top hidden-sm hidden-xs" style={{textAlign:'center', fontSize:22, fontFamily:'Dongle', fontWeight:'300'}}>

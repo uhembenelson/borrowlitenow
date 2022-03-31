@@ -21,6 +21,7 @@ import Borrow from './pages/Borrowing';
 import Getpower from './pages/Borrowing/Blocks/Getpower';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import UIkit from 'uikit'
 
 
 function App() {
