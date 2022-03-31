@@ -29,8 +29,6 @@ const Blogg = () => {
             <input style={{borderRadius:5,height:66, fontFamily:'Dongle', fontSize:32, fontWeight:'300'}} class="uk-input" type="text"  placeholder="Search for articles"/>
         </div>
     </div>
-
-
         {/* <div className="uk-margin">
             <form className="uk-search uk-search-default" style={{width:'450px'}}>
                 <span className="uk-search-icon-flip" uk-icon="search"></span>

@@ -19,7 +19,7 @@ const Mission = () => {
             and pay late. learn more about borrowlite and the services we offer 
            </div>
 
-        <Toggle/>
+  
 
 
            <div className="uk-margin-top hidden-sm hidden-xs" style={{textAlign:'center', fontSize:22, fontFamily:'Dongle', fontWeight:'300'}}>
