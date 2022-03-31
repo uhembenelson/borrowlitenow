@@ -6,7 +6,15 @@ const Blogpic = () => {
   
     return (
     <>
-        <div>
+  
+
+
+  <div className="">
+
+  </div>
+
+
+        {/* <div>
             <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12 ">
                 <div className=" uk-text-center uk-margin-left">
                     <img src={one} style={{width:'364px', height:'318px' , marginTop:'68px'}}/>
@@ -112,7 +120,7 @@ const Blogpic = () => {
                 </button>
             </div>
             
-        </div>
+        </div> */}
     </>
     );
   

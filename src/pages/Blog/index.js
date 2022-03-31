@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Blogg from './Blocks/Blogg';
+import Footer from '../Home/Blocks/Footer';
 
 const Blog = ()=> {
 
@@ -8,9 +9,8 @@ const Blog = ()=> {
 
     return(
      <div>
-         <Blogg/>
-         
-         
+         <Blogg/> 
+         <Footer/>
      </div>
     )
 
