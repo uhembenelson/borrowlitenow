@@ -37,8 +37,8 @@ const Footer = () => {
 
               <div className="col-lg-3 col-xs-6 ">
                 <div className="uk-margin-left" style={{fontSize:32,fontFamily:'Dongle',}}>Legal</div>
-                <div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Terms of Use</div>
-                <div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Privacy Policy</div>
+                <Link to="/Conditions" style={{textDecoration: 'none', color: '#333333'}}><div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Terms of Use</div></Link>
+                <Link to="/Privacy" style={{textDecoration: 'none', color: '#333333'}}><div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Privacy Policy</div></Link>
               </div>
 
               <div className="col-lg-3 col-xs-6 ">

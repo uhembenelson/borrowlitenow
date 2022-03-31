@@ -12,17 +12,11 @@ import { UserContext } from '../context/UserContext';
 
 
 const  MainNavigation = (props)=> {
-  const [showmenu, setShowmenu] = useState(false)
+  const [showmenu, setShowmenu] = useState(false);
   const userdata = JSON.parse(localStorage.getItem("userdata"));
   const [showpop, setShowpop] = useState(false)
 
-  const handleToggle = () => {
-    if (showmenu === false){
-      console.log("its working")
-    } else{
-      console.log("its not working")
-    }
-  }
+
 
   const { user } = useContext(UserContext)
   const Logout = async() =>{
@@ -80,6 +74,22 @@ const  MainNavigation = (props)=> {
                     <li class="uk-margin-small-top "><Link to="/Signup" href="#" style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                     <span style={{color: '#222'}} class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Sign up
                     </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Terms of Use
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Privacy Policy
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Blog
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Contact us
+                      </Link>
                     </li>
                   </ul>
 

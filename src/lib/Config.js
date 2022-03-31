@@ -2,7 +2,7 @@ import axios from 'axios';
 // https://borrowlight.herokuapp.com/ 
 // http://localhost:27017/
 const instance = axios.create({
-    baseURL: 'https://borrowlight.herokuapp.com/',
+    baseURL: 'http://localhost:27017/',
     withCredentials: false,
 });
 

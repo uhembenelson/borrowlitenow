@@ -101,7 +101,7 @@ const Faqs = ()=> {
 
         {
           faqData.map((item) => 
-          <li className="" style={{listStyle: 'none', border: '1px solid green'}}>
+          <li className="" style={{listStyle: 'none', }}>
             <div className="uk-margin-top " style={{border: '1px solid #BDBDBD', borderRadius: '5px',}}>
             <h3 style={{fontWeight:'200', fontSize:28,fontFamily:'Dongle', marginLeft: '10px' }} onClick={() =>{handleChange(item)}} class="uk-accordion-title">{item.question}</h3>
             </div>
