@@ -8,6 +8,7 @@ import { Dots, Spinner } from "react-activity";
 import "react-activity/dist/Dots.css";
 import Popup from 'react-animated-popup';
 import { render } from 'react-dom';
+import Footer from '../Home/Blocks/Footer';
 
 const  Signup =()=> {
 const [fullname, setFullname] = useState()
@@ -291,6 +292,7 @@ const register = () => {
       </div>
       
     </div>
+    <Footer/>
     </>
    
 

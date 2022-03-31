@@ -4,6 +4,7 @@ import Popup from 'react-animated-popup';
 import axios from '../../lib/Config'
 
 import logo from '../../images/logo.png'
+import Footer from '../Home/Blocks/Footer';
 
 
 const  Signin = ()=> {
@@ -185,6 +186,7 @@ const  Signin = ()=> {
       <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12"></div>
 
     </div>
+    <Footer/>
     </>
 
 
