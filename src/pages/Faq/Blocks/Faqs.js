@@ -7,7 +7,7 @@ const Faqs = ()=> {
     {
       id:'1',
       question: 'Why did my meter reject the token?',
-      answer: 'head to borrowlite.com to get sta'
+      answer: 'The purchase was for the wrong meter number. Kindly confirm you are loading the token on the right meter.'
     },
     {
       id:'2',
@@ -101,8 +101,8 @@ const Faqs = ()=> {
 
         {
           faqData.map((item) => 
-          <li style={{listStyle: 'none'}}>
-            <div className="uk-margin-top" style={{border: '1px solid #BDBDBD', borderRadius: '5px',}}>
+          <li className="" style={{listStyle: 'none', }}>
+            <div className="uk-margin-top " style={{border: '1px solid #BDBDBD', borderRadius: '5px',}}>
             <h3 style={{fontWeight:'200', fontSize:28,fontFamily:'Dongle', marginLeft: '10px' }} onClick={() =>{handleChange(item)}} class="uk-accordion-title">{item.question}</h3>
             </div>
           

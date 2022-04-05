@@ -7,7 +7,7 @@ import './index.css'
 //import Buy from './pages/Buys';
 import Layout from './components/layout/Layout';
 
-import Borrowlight from './pages/Borrowlight';
+import Borrowlight from './pages/Borrowlighti';
 import Index from './pages/Home/Index';
 import Signin from './pages/Auth/Signin';
 import Signup from './pages/Auth/Signup';
@@ -21,7 +21,14 @@ import Borrow from './pages/Borrowing';
 import Getpower from './pages/Borrowing/Blocks/Getpower';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Conditions from './pages/Conditions';
+import Privacy from './pages/Privacy';
+import Blog from './pages/Blog';
+
+
+
 import Faq from './pages/Faq';
+
 
 
 function App() {
@@ -41,7 +48,12 @@ function App() {
         <Route path='/Getpower' element={<Getpower/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+
         <Route path='/Faq' element={<Faq/>}/>
+        <Route path='/Conditions' element={<Conditions/>}/>
+        <Route path='/Privacy' element={<Privacy/>}/>
+        <Route path='/Blog' element={<Blog/>}/>
+
        
 
         {/* <Route path='/Footer' element={<Footer/>} /> */}

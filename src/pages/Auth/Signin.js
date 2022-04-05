@@ -4,6 +4,7 @@ import Popup from 'react-animated-popup';
 import axios from '../../lib/Config'
 
 import logo from '../../images/logo.png'
+import Footer from '../Home/Blocks/Footer';
 
 
 const  Signin = ()=> {
@@ -24,16 +25,7 @@ const  Signin = ()=> {
     }
 
     console.log(data)
-    // if(number === '' || undefined){
-    //  setError("Hello dear your phone number is required")
-    //  setVisible(true);
-      
-    // }
-    // if(password === '' || undefined){
-    //   setError("Hello dear your password is required")
-    //   setVisible(true);
-       
-    //  }
+    
     if(number === '' || undefined){
       setError("Hello dear your phone number is required")
       setVisible(true);
@@ -86,18 +78,7 @@ const  Signin = ()=> {
     }
     
 
-      
-
-      
-   
-
-    //validation 
-
-
-    console.log(data)
-   // console.log("this is working", number, password)
-    // password == ""? (<Showpop  error="Hello dear passward is required"/>):(<></>)
-
+     
   }
 
   const Showpop =()=>{
@@ -185,6 +166,7 @@ const  Signin = ()=> {
       <div class="col-lg-3 col-sm-12 col-md-12 col-xs-12"></div>
 
     </div>
+    <Footer/>
     </>
 
 

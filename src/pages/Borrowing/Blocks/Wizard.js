@@ -45,47 +45,6 @@ const Wizard = (props) => {
 
 
 
-
-
-
-            {/* <div className="col-lg-12" >
-                 <div className="col-lg-3 col-xs-3 ">
-                     <div className="row" style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
-                     <div style={{ marginTop: -9, fontFamily:'Dongle',fontSize:36, color:'#350ACC', display:'flex', justifyContent:'center', alignItems:'center', width:60, height:60, borderColor:'#350ACC', borderStyle:'solid', borderRadius:360}}>1</div>
-                     <div className="uk-margin-top" style={{ color:'#350ACC', width:'80%', marginLeft:5, display:'flex', justifyContent:'center', alignItems:'center', borderTop:'dotted',}}/>
-                     
-                     </div>
-                     <div className="uk-margin-small-top" style={{fontSize:25, fontFamily:'Dongle', fontWeight:'300'}}>Order Elecricity</div>
-                     </div>
-
-
-                     <div className="col-lg-3 col-xs-3">
-                     <div className="row" style={{display:'flex', flexDirection:'row'}}>
-                     <div style={{ marginTop: -9, fontFamily:'Dongle',fontSize:36, color:'#350ACC', display:'flex', justifyContent:'center', alignItems:'center', width:60, height:60, borderColor:'#350ACC', borderStyle:'solid', borderRadius:360}}>2</div>
-                     <div className="uk-margin-top" style={{ color:'#350ACC', width:'80%', marginLeft:5, display:'flex', justifyContent:'center', alignItems:'center', borderTop:'dotted',}}/>
-                     
-                     </div>
-                     <div className="uk-margin-small-top" style={{fontSize:25, fontFamily:'Dongle', fontWeight:'300'}}>Review Order</div>
-                     </div>
-
-                     <div className="col-lg-3 col-xs-3">
-                     <div className="row" style={{display:'flex', flexDirection:'row'}}>
-                     <div style={{ marginTop: -9, fontFamily:'Dongle',fontSize:36, color:'#350ACC', display:'flex', justifyContent:'center', alignItems:'center', width:60, height:60, borderColor:'#350ACC', borderStyle:'solid', borderRadius:360}}>2</div>
-                     <div className="uk-margin-top" style={{ color:'#350ACC', width:'80%', marginLeft:5, display:'flex', justifyContent:'center', alignItems:'center', borderTop:'dotted',}}/>
-                     
-                     </div>
-                     <div className="uk-margin-small-top" style={{fontSize:25, fontFamily:'Dongle', fontWeight:'300'}}>Review Order</div>
-                     </div>
-
-                     <div className="col-lg-3 col-xs-3">
-                     <div className="row" style={{display:'flex', flexDirection:'row'}}>
-                     <div style={{ marginTop: -9, fontFamily:'Dongle',fontSize:36, color:'#350ACC', display:'flex', justifyContent:'center', alignItems:'center', width:60, height:60, borderColor:'#350ACC', borderStyle:'solid', borderRadius:360}}>2</div>
-                     
-                     
-                     </div>
-                     <div className="uk-margin-small-top" style={{fontSize:25, fontFamily:'Dongle', fontWeight:'300'}}>Review Order</div>
-                     </div>
-             </div>  */}
          </div>
              
         </div>

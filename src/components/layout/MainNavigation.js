@@ -12,7 +12,7 @@ import { UserContext } from '../context/UserContext';
 
 
 const  MainNavigation = (props)=> {
-  const [showmenu, setShowmenu] = useState(false)
+  const [showmenu, setShowmenu] = useState(false);
   const userdata = JSON.parse(localStorage.getItem("userdata"));
   const [showpop, setShowpop] = useState(false)
 
@@ -25,7 +25,6 @@ const  MainNavigation = (props)=> {
   }
   return (
     <>
-
     {/* navbar for small screens */}
     <nav class="uk-navbar uk-hidden@s container" uk-navbar>
       <div class="uk-navbar-left">
@@ -59,6 +58,7 @@ const  MainNavigation = (props)=> {
                       Vendor
                     </Link>
                     </li>
+                    
                     <li class="uk-margin-small-top "><Link to="#/"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       For Developers
                       </Link>
@@ -74,6 +74,22 @@ const  MainNavigation = (props)=> {
                     <li class="uk-margin-small-top "><Link to="/Signup" href="#" style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                     <span style={{color: '#222'}} class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Sign up
                     </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Terms of Use
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Privacy Policy
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Blog
+                      </Link>
+                    </li>
+                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                      Contact us
+                      </Link>
                     </li>
                   </ul>
 

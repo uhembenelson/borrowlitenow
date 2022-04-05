@@ -11,21 +11,22 @@ const Footer = () => {
 
     return(
         <div className="uk-margin-large-top" style={{backgroundColor:'#F8F5FF'}}>
-        <div className="uk-container">
-          <div className="  col-lg-3 col-lg-12 uk-margin-top uk-margin-large-bottom">
-            <img src={logo} style={{width:120}} alt=""/>
-            <div style={{fontSize:32,fontFamily:'Dongle', fontWeight:'300' }}>
-            @2022 Borrowlite inc.
-            </div>
-            <div className="row">
+          <div className="uk-container">
+            <div className="col-lg-3 col-lg-12 uk-margin-top uk-margin-large-bottom">
+              <img src={logo} style={{width:120}} alt=""/>
+              <div style={{fontSize:32,fontFamily:'Dongle', fontWeight:'300' }}>
+              @2022 Borrowlite inc.
+              </div>
+              <div className="row">
 
-            <img src={insta2} style={{width:52, height:52,}} className="uk-margin-right" alt="" />                 
-            <img src={facebook} style={{width:52, height:52,}} className="uk-margin-right" alt="" />
-            <img src={twi} style={{width:52, height:52,}} className="uk-margin-right" alt=""/>
-            <img src={lin} style={{width:52, height:52,}} className="uk-margin-right" alt="" />
-                
+              <img src={insta2} style={{width:52, height:52,}} className="uk-margin-right" alt="" />                 
+              <img src={facebook} style={{width:52, height:52,}} className="uk-margin-right" alt="" />
+              <img src={twi} style={{width:52, height:52,}} className="uk-margin-right" alt=""/>
+              <img src={lin} style={{width:52, height:52,}} className="uk-margin-right" alt="" />
+                  
             </div>
-            </div>
+          </div>
+
           <div className="col-lg-9 col-lg-12 uk-margin-top uk-margin-large-bottom">
             <div className="row uk-margin-top">
               <div className="col-lg-3 col-xs-6 ">
@@ -36,8 +37,8 @@ const Footer = () => {
 
               <div className="col-lg-3 col-xs-6 ">
                 <div className="uk-margin-left" style={{fontSize:32,fontFamily:'Dongle',}}>Legal</div>
-                <div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Terms of Use</div>
-                <div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Privacy Policy</div>
+                <Link to="/Conditions" style={{textDecoration: 'none', color: '#333333'}}><div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Terms of Use</div></Link>
+                <Link to="/Privacy" style={{textDecoration: 'none', color: '#333333'}}><div className="uk-margin-left" style={{fontSize:24,fontFamily:'Dongle', fontWeight:'300'}}>Privacy Policy</div></Link>
               </div>
 
               <div className="col-lg-3 col-xs-6 ">
