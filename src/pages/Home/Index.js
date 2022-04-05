@@ -22,7 +22,7 @@ import Whyus from "./Blocks/Whyus";
 import Calltoaction from "./Blocks/Calltoaction";
 import Action from "./Blocks/Action";
 
-const Index = () => {
+const Index = (props) => {
   const { authenticated, user } = useContext(UserContext);
   const [userdata, setUserdata ] = useState(user)
 
@@ -104,111 +104,9 @@ const Index = () => {
     );
   };
 
-  const register = () => {
-    const payload = {
-      fullname,
-      email,
-      number,
-      userType,
-      password,
-      meter_number,
-      balance: "0",
-    };
-    console.log(payload);
-    if (fullname == undefined) {
-      setError("Hello dear your full name  is required");
-      setVisible(true);
-    } else {
-      if (email == undefined) {
-        setError("Hello dear your email  is required");
-        setVisible(true);
-      } else {
-        if (number == undefined) {
-          setError("Hello dear your phone number  is required");
-          setVisible(true);
-        } else {
-          if (meter_number == undefined) {
-            setError("Hello dear your meter number is required");
-            setVisible(true);
-          } else {
-            if (userType == undefined) {
-              setError("Hello dear your user type  is required");
-              setVisible(true);
-            } else {
-              if (password == undefined) {
-                setError("Hello dear your password  is required");
-                setVisible(true);
-              } else {
-                setLoadingme(true);
-                axios
-                  .post(
-                    "https://borrowlight.herokuapp.com/api/v2/register/",
-                    payload
-                  )
-                  .then(function (response) {
-                    console.log(response.data);
-                    if (response.data.data == "account created") {
-                      setLoadingme(false);
-                      setSuccess(<Welcome />);
-                      setShowsuccess(true);
-                      setEmail("");
-                      setFullname("");
-                      setMeter_number("");
-                      setNumber("");
-                      setUserType("");
-                    } else {
-                      setLoadingme(false);
-                      setError(`${response.data.msg}`);
-                      setVisible(true);
-                      console.log("this is me", response.data.msg);
-                    }
-                  })
-                  .catch((Error) => {
-                    setLoadingme(false);
-                    if (Error == "Network Error") {
-                      setLoadingme(false);
-                      setError(
-                        "there seem to be a network error, please check your connection"
-                      );
-                      setVisible(true);
-                    }
-                  });
-              }
-            }
-          }
-        }
-      }
-    }
-  };
+  
 
-  const Welcome = () => {
-    return (
-      <div>
-        <p>
-          We’re thrilled to have you join us at borrowlite, we will send you a
-          text message or an email with your token when it's generated
-        </p>
-        follow us on our social media platforms while you wait..
-        <p>
-          <a
-            href="https://www.twitter.com/borrowlite"
-            class="uk-icon-button uk-margin-small-right"
-            uk-icon="twitter"
-          ></a>
-          <a
-            href="https://www.facebook.com/borrowlite"
-            class="uk-icon-button  uk-margin-small-right"
-            uk-icon="facebook"
-          ></a>
-          <a
-            href="https://www.instagram.com/borrowlite"
-            class="uk-icon-button"
-            uk-icon="instagram"
-          ></a>
-        </p>
-      </div>
-    );
-  };
+  
 
   return (
     <>
@@ -218,7 +116,7 @@ const Index = () => {
             authenticated === true ? (
               <Action userdata = { userdata }/>
             ):(
-              <Calltoaction/>
+              <Calltoaction authenticated = {authenticated}/>
             )
           }
          
@@ -244,7 +142,7 @@ const Index = () => {
         <Comments />
         <Discos />
       </body>
-      {/* this is the footer area */}
+     
       <Footer />
     </>
   );

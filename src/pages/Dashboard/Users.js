@@ -1,7 +1,7 @@
 import React,{ useState,createContext, useContext, useEffect } from "react";
 import { UserContext } from "../../components/context/UserContext";
 import  Sidebar from '../Dashboard/Sidebar';
-import axios from "axios";
+import axios from "../../lib/Config";
 
 /* Install pure-react-carousel using -> npm i pure-react-carousel */
 
@@ -15,7 +15,7 @@ export default function Users() {
    const [totalUsers, setTotalUser] = useState("")
 
    const getAllTransactons =()=> {
-    axios.get("http://localhost:27017/getAllTransactions").then((res =>{
+    axios.get("/getAllTransactions").then((res =>{
 
     const data = res.data
     const allamount = data.map(x => parseInt(x.amount))
@@ -28,7 +28,7 @@ export default function Users() {
 }
 
      const getallusers =()=> {
-         axios.get("http://localhost:27017/api/v2/users").then((res =>{
+         axios.get("/api/v2/users").then((res =>{
 
          const data = res.data
          console.log(data)

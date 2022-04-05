@@ -7,7 +7,7 @@ import './index.css'
 //import Buy from './pages/Buys';
 import Layout from './components/layout/Layout';
 
-import Borrowlight from './pages/Borrowlight';
+import Borrowlight from './pages/Borrowlighti';
 import Index from './pages/Home/Index';
 import Signin from './pages/Auth/Signin';
 import Signup from './pages/Auth/Signup';

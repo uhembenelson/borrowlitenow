@@ -23,11 +23,11 @@ const Borrowlight = () => {
     const [code, setCode]= useState()
     const [email, setEmail] = useState()
 
-    useEffect(()=>{
-        if(!authenticated){
-            naviate("/signin")
-        }
-    })
+    // useEffect(()=>{
+    //     if(!authenticated){
+    //         naviate("/signin")
+    //     }
+    // })
 
 
     const verifymeter = () =>{
@@ -186,96 +186,8 @@ if(response.data !== null){
 
 const RenderBorrowlite = () =>{
     return(
-        <div class="row uk-container uk-height-viewport">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 uk-margin-top">
-     
-     
-         {
-             showcode == true?(
-                 <div class="uk-card uk-card-body uk-card-default">
-                     <span>Thank you for using borrowlite, <br></br>you will receive an sms with your token shortly</span><br></br>
-                     <span> meter name: {metername}</span><br></br>
-                     <span> meter number: {meter_number}</span><br></br>
-                     <span> phone number: {number}</span><br></br>
-                     <span> amount: {amount}</span><br></br>
-                     <span> meter unit: {code}</span><br></br>
-                 </div>
-             ):(
-     
-               <div  style={{borderRadius:'5px'}}class="uk-card uk-card-body uk-card-default">
-               {
-                   show == true ? (
-                       <div>
-                           Please verify if this is your meter name<br></br>
-                           <h5>{metername}</h5>
-                       </div>
-                   ):(null)
-               }
-               
-      
-                
-          
-               
-          <div class="uk-margin">
-                  <select  value={product_code}   name="product_code" onChange={e => setProduct_code(e.target.value)}  style={{borderRadius:'5px'}}class="uk-select">
-                      <option disabled selected>Select your Disco</option>
-                      <option value="phed_prepaid_custom" >PHED</option>
-                      <option value="ibedc_prepaid_custom" >IBEDC</option>
-                      <option value="ikedc_prepaid_custom" >IKEDC</option>
-                      <option value="ekedc_prepaid_custom" >EKEDC</option>
-                      <option value="aedc_prepaid_custom" >AEDC</option>
-                      <option value="kedco_prepaid_custom" >KEDCO</option>
-                      <option value="kedc_prepaid_custom" >KEDC</option>
-                      <option value="yedc_prepaid_custom" >YEDC</option>
-                      <option value="jecd_prepaid_custom" >JEDC</option>
-                      <option value="bedc_prepaid_custom" >BEDC</option>
-                      <option value="eedc_prepaid_custom" >EEDC</option>
-                  </select>
-              </div>
-      
-              <div class="uk-margin">
-                  <input value={meter_number}   name="meter_number" onChange={e => setMeter_number(e.target.value)}  style={{borderRadius:"5px"}} class="uk-input" type="text" placeholder="Meter number"></input>
-              </div>
-              <div class="uk-margin">
-                  <input value={amount}   name="amount" onChange={e => setAmount(e.target.value)} style={{borderRadius:"5px"}} class="uk-input" type="text" placeholder="Amount"></input>
-              </div>
-      
-              <div class="uk-margin">
-                  <input value={number}   name="number" onChange={e => setNumber(e.target.value)} style={{borderRadius:"5px"}} class="uk-input" type="text" placeholder="Phone number"></input>
-              </div>
-              <div class="uk-margin">
-                  <input value={email}   name="number" onChange={e => setEmail(e.target.value)} style={{borderRadius:"5px"}} class="uk-input" type="text" placeholder="Email address"></input>
-              </div>
-            {
-                show == true?(
-                  
-                  <div class="uk-margin">
-                  <button  onClick={getlight}  style={{  fontFamily:'Rubik', fontWeight: '400', borderRadius:'5px', backgroundColor:'#fdd697', color:'#213948'}}class="uk-button uk-button-default uk-button-large uk-margin-small-right uk-width-1-1 ">
-                      Borrow light
-                      </button>
-                      </div>
-                ):(  <div class="uk-margin">
-                <button onClick={verifymeter}  style={{  fontFamily:'Rubik', fontWeight: '400', borderRadius:'5px', backgroundColor:'#fdd697', color:'#213948'}}class="uk-button uk-button-default uk-button-large uk-margin-small-right uk-width-1-1 ">
-                    verify meter number
-                    </button>
-                    </div>)
-            }
-      
-              
-      
-                </div>
-      
-      
-      
-             )
-         }
-     
-            </div>
-     
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-               <img src={bg}/>
-            </div>
-        </div>
+        <>
+        </>
       )
 }
   

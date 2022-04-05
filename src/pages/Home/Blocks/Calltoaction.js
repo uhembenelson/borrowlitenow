@@ -125,7 +125,7 @@ const Calltoaction = () => {
                 </Link>
               </div>
               <div class="uk-margin uk-margin-large-top">
-                <Link to="/borrowlight">
+                <Link to="/borrow">
                   <button
                     style={{
                       backgroundColor: "#339900",

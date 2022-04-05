@@ -25,16 +25,7 @@ const  Signin = ()=> {
     }
 
     console.log(data)
-    // if(number === '' || undefined){
-    //  setError("Hello dear your phone number is required")
-    //  setVisible(true);
-      
-    // }
-    // if(password === '' || undefined){
-    //   setError("Hello dear your password is required")
-    //   setVisible(true);
-       
-    //  }
+    
     if(number === '' || undefined){
       setError("Hello dear your phone number is required")
       setVisible(true);
@@ -87,18 +78,7 @@ const  Signin = ()=> {
     }
     
 
-      
-
-      
-   
-
-    //validation 
-
-
-    console.log(data)
-   // console.log("this is working", number, password)
-    // password == ""? (<Showpop  error="Hello dear passward is required"/>):(<></>)
-
+     
   }
 
   const Showpop =()=>{
