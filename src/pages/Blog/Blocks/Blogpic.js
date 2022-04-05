@@ -3,30 +3,12 @@ import one from '../../../images/one.png';
 import two from '../../../images/two.png';
 import three from '../../../images/three.png';
 const Blogpic = () => {
-<<<<<<< HEAD
-  
-    return (
-    <>
-  
 
 
-  <div className="">
-
-  </div>
-
-
-        {/* <div>
-            <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12 ">
-                <div className=" uk-text-center uk-margin-left">
-                    <img src={one} style={{width:'364px', height:'318px' , marginTop:'68px'}}/>
-
-                    <div style={{fontStyle:'Dongle' , fontWeight:'400px' , fontSize:'28px' , lineHeight:'1.5'}}>The three pillars of great UX <br/>
-                        <span style={{marginRight:'154px'}}>design in web3</span>
-                    </div>
-=======
         return(
-            <div>
-                <div className='container '>
+    
+            <>
+                {/* <div className='container '>
                     <div className='row' style={{marginTop:30}}>
                         
                         <div className='uk-margin-top hidden-lg hidden-md col-lg-4 col-md-4 col-xs-12 col-sm-12 ' >
@@ -42,22 +24,10 @@ const Blogpic = () => {
 
                             </div>
                         </div>
->>>>>>> tola
+
 
                     </div>
                         
-
-                        
-                        
-
-
-                        
-                        
-
-
-
-                       
-
 
                     <div className='row ' style={{marginTop:60}} >
                         
@@ -102,8 +72,8 @@ const Blogpic = () => {
                 
                 </div>
                 
-            </div>
-<<<<<<< HEAD
+        
+
 
             
             <div className='uk-margin-top hidden-sm hidden-xs' style={{textAlign:'center'}}>
@@ -116,14 +86,12 @@ const Blogpic = () => {
                 <button className='uk-button uk-button-default uk-button-large uk-align-left' style={{color:'#450ACC' , width:'467px' , height:'56px' , fontFamily:'Dongle' , fontWeight:'400' , fontSize:'25px'  , borderRadius:'3px' }}>
                     See more Posts
                 </button>
-            </div>
+            </div> */}
             
-        </div> */}
-    </>
-=======
-    
->>>>>>> tola
-    );
+        
+</>
+    )
+
   
 }
 
