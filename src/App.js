@@ -50,7 +50,11 @@ function App() {
         <Route path='/Contact' element={<Contact/>}/>
 
         <Route path='/Faq' element={<Faq/>}/>
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> tola
         <Route path='/Conditions' element={<Conditions/>}/>
         <Route path='/Privacy' element={<Privacy/>}/>
         <Route path='/Blog' element={<Blog/>}/>
