@@ -25,7 +25,7 @@ import Conditions from './pages/Conditions';
 import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
 
-import UIkit from 'uikit'
+
 
 import Faq from './pages/Faq';
 
@@ -48,13 +48,13 @@ function App() {
         <Route path='/Getpower' element={<Getpower/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>
-<<<<<<< HEAD
+
         <Route path='/Faq' element={<Faq/>}/>
-=======
+       
         <Route path='/Conditions' element={<Conditions/>}/>
         <Route path='/Privacy' element={<Privacy/>}/>
         <Route path='/Blog' element={<Blog/>}/>
->>>>>>> origin/tola
+
        
 
         {/* <Route path='/Footer' element={<Footer/>} /> */}
