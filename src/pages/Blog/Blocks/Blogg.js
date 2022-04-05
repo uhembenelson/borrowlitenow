@@ -58,11 +58,6 @@ const Blogg = () => {
                     height:66,
                     width:582,
                     marginTop:30
-                    
-                    
-                    
-                    
-                    
 
                     }}
                     class="uk-input uk-form-width-medium uk-form-large uk-form-width-large" 

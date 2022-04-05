@@ -8,7 +8,7 @@ const Blogpic = () => {
         return(
     
             <>
-                {/* <div className='container '>
+                <div className='container '>
                     <div className='row' style={{marginTop:30}}>
                         
                         <div className='uk-margin-top hidden-lg hidden-md col-lg-4 col-md-4 col-xs-12 col-sm-12 ' >
@@ -86,7 +86,7 @@ const Blogpic = () => {
                 <button className='uk-button uk-button-default uk-button-large uk-align-left' style={{color:'#450ACC' , width:'467px' , height:'56px' , fontFamily:'Dongle' , fontWeight:'400' , fontSize:'25px'  , borderRadius:'3px' }}>
                     See more Posts
                 </button>
-            </div> */}
+            </div>
             
         
 </>
