@@ -54,12 +54,12 @@ const  MainNavigation = (props)=> {
           <img src={logo}  width={70} alt=""/>
           </a>
         </li>
-                    <li class="uk-margin-small-top "><Link to="#/"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/comingsoon"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       Vendor
                     </Link>
                     </li>
                     
-                    <li class="uk-margin-small-top "><Link to="#/"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/comingsoon"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       For Developers
                       </Link>
                     </li>
@@ -75,19 +75,19 @@ const  MainNavigation = (props)=> {
                     <span style={{color: '#222'}} class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Sign up
                     </Link>
                     </li>
-                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/conditions"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       Terms of Use
                       </Link>
                     </li>
-                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/privacy"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       Privacy Policy
                       </Link>
                     </li>
-                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/blog"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       Blog
                       </Link>
                     </li>
-                    <li class="uk-margin-small-top "><Link to="/about"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
+                    <li class="uk-margin-small-top "><Link to="/contact"  style={{fontFamily:'Dongle', fontSize:25, color: '#222'}}>
                       Contact us
                       </Link>
                     </li>
@@ -115,16 +115,21 @@ const  MainNavigation = (props)=> {
 
       <div class="uk-navbar-right">
           <ul class="uk-navbar-nav">
-            <li class="uk-margin-small-top "><a href="#/" style={{fontFamily:'Dongle', fontSize:25}}>
+            <li class="uk-margin-small-top "><a href="/comingsoon" style={{fontFamily:'Dongle', fontSize:25}}>
               vendor
               </a>
             </li>
-            <li class="uk-margin-small-top "><a href="#/" style={{fontFamily:'Dongle', fontSize:25}}>
+            <li class="uk-margin-small-top "><a href="/comingsoon" style={{fontFamily:'Dongle', fontSize:25}}>
               For developers
               </a>
               </li>
               <li class="uk-margin-small-top "><Link to="/About" style={{fontFamily:'Dongle', fontSize:25}}>
               about Us
+              </Link>
+            </li>
+
+            <li class="uk-margin-small-top "><Link to="/Blog" style={{fontFamily:'Dongle', fontSize:25}}>
+              Blog
               </Link>
             </li>
 

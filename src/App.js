@@ -24,6 +24,8 @@ import Contact from './pages/Contact';
 import Conditions from './pages/Conditions';
 import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
+import Blogpost from './pages/Blog/Blocks/Blogpost';
+import Comingsoon from './pages/Comingsoon.js';
 
 
 
@@ -53,6 +55,8 @@ function App() {
         <Route path='/Conditions' element={<Conditions/>}/>
         <Route path='/Privacy' element={<Privacy/>}/>
         <Route path='/Blog' element={<Blog/>}/>
+        <Route path='/Blogpost' element={<Blogpost/>}/>
+        <Route path='/Comingsoon' element={<Comingsoon/>}/>
 
        
 

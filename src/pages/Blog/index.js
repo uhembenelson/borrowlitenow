@@ -16,8 +16,6 @@ const Blog = ()=> {
      <div>
 
          <Blogg/> 
-
-         <Blogg/>
          <Blogpic/>
 
          <Footer/>

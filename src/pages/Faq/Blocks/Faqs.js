@@ -96,8 +96,9 @@ const Faqs = ()=> {
   }
   return (
     <div className="uk-container ">
-
+   
       <ul uk-accordion>
+      <div className="uk-flex uk-flex-center" style={{fontSize:42, fontFamily:'Dongle', color:'#339900'}}>Frequently Asked  <span className="uk-margin-small-left" style={{color:'#20272C'}}> Questions </span></div>
 
         {
           faqData.map((item) => 
